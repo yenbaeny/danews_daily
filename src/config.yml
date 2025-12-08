@@ -1,0 +1,185 @@
+date_format: "%Y-%m-%d"
+max_per_feed: 30
+
+feeds:
+  # ---------- English ---------
+  - id: WSJ_world
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/RSSWorldNews"
+    lang: "en"
+    category: "World"
+
+  - id: WSJ_economy
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/socialeconomyfeed"
+    lang: "en"
+    category: "Economy"
+
+  - id: WSJ_market
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"
+    lang: "en"
+    category: "Markets"
+
+  - id: WSJ_business
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness"
+    lang: "en"
+    category: "Business"
+
+  - id: WSJ_tech
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/RSSWSJD"
+    lang: "en"
+    category: "Technology"
+
+  - id: WSJ_realestate
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/latestnewsrealestate"
+    lang: "en"
+    category: "Real Estate"
+
+  - id: WSJ_politics
+    name: "WSJ"
+    url: "https://feeds.content.dowjones.io/public/rss/socialpoliticsfeed"
+    lang: "en"
+    category: "Politics"
+
+  - id: ft_world
+    name: "FT"
+    url: "https://www.ft.com/world?format=rss"
+    lang: "en"
+    category: "World"
+
+  - id: ft_technology
+    name: "FT"
+    url: "https://www.ft.com/technology?format=rss"
+    lang: "en"
+    category: "Technology"
+
+  - id: ft_markets
+    name: "FT"
+    url: "https://www.ft.com/markets?format=rss"
+    lang: "en"
+    category: "Markets"
+
+  - id: ft_middleeast
+    name: "FT"
+    url: "https://www.ft.com/middle-east-north-africa?format=rss"
+    lang: "en"
+    category: "Middle East"
+
+  - id: eco_business
+    name: "The Economist"
+    url: "https://www.economist.com/business/rss.xml"
+    lang: "en"
+    category: "Business"
+
+  - id: eco_business
+    name: "The Economist"
+    url: "https://www.economist.com/business/rss.xml"
+    lang: "en"
+    category: "Business"
+
+  - id: eco_science
+    name: "The Economist"
+    url: "https://www.economist.com/science-and-technology/rss.xml"
+    lang: "en"
+    category: "Technology"
+
+  - id: eco_economy
+    name: "The Economist"
+    url: "https://www.economist.com/finance-and-economics/rss.xml"
+    lang: "en"
+    category: "Economy"
+
+  - id: eco_middleeast
+    name: "The Economist"
+    url: "https://www.economist.com/middle-east-and-africa/rss.xml"
+    lang: "en"
+    category: "Middle East"
+
+  # ---------- Korean ----------
+  - id: hk_econ
+    name: "한국경제"
+    url: "https://www.hankyung.com/feed/economy"
+    lang: "ko"
+    category: "경제"
+
+  - id: hk_it
+    name: "한국경제"
+    url: "https://www.hankyung.com/feed/it"
+    lang: "ko"
+    category: "IT"
+
+  - id: hk_finance
+    name: "한국경제"
+    url: "https://www.hankyung.com/feed/finance"
+    lang: "ko"
+    category: "증권"
+
+  - id: hk_realestate
+    name: "한국경제"
+    url: "https://www.hankyung.com/feed/realestate"
+    lang: "ko"
+    category: "부동산"
+
+  - id: hk_politics
+    name: "한국경제"
+    url: "https://www.hankyung.com/feed/politics"
+    lang: "ko"
+    category: "정치"
+
+  - id: mk_econ
+    name: "매일경제"
+    url: "https://www.mk.co.kr/rss/30100041/"
+    lang: "ko"
+    category: "경제"
+
+  - id: mk_politics
+    name: "매일경제"
+    url: "https://www.mk.co.kr/rss/30200030/"
+    lang: "ko"
+    category: "정치"
+
+  - id: mk_companies
+    name: "매일경제"
+    url: "https://www.mk.co.kr/rss/50100032/"
+    lang: "ko"
+    category: "기업"
+
+  - id: mk_finance
+    name: "매일경제"
+    url: "https://www.mk.co.kr/rss/50200011/"
+    lang: "ko"
+    category: "증권"
+
+  - id: mk_realestate
+    name: "매일경제"
+    url: "https://www.mk.co.kr/rss/50300009/"
+    lang: "ko"
+    category: "부동산"
+
+  - id: se_it
+    name: "서울경제"
+    url: "https://www.sedaily.com/rss/it"
+    lang: "ko"
+    category: "IT"
+
+  - id: se_finance
+    name: "서울경제"
+    url: "https://www.sedaily.com/rss/finance"
+    lang: "ko"
+    category: "증권"
+
+  - id: se_econ
+    name: "서울경제"
+    url: "https://www.sedaily.com/rss/economy"
+    lang: "ko"
+    category: "경제"
+
+  - id: se_politics
+    name: "서울경제"
+    url: "https://www.sedaily.com/rss/politics"
+    lang: "ko"
+    category: "정치"

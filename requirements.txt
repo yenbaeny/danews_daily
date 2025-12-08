@@ -1,2 +1,3 @@
 feedparser
 scikit-learn
+pyyaml

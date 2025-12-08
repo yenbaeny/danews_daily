@@ -1,0 +1,36 @@
+name: Daily News Digest
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # 04:00 UTC (08:00 in Dubai, UTC+4)
+  workflow_dispatch:       # Allow manual runs
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run digest script
+        run: python src/news_digest.py
+
+      - name: Commit & push results
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "actions@github.com"
+          git add digests/
+          git diff --cached --quiet || git commit -m "Daily digest $(date +'%Y-%m-%d')"
+          git push

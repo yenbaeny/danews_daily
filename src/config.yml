@@ -1,5 +1,6 @@
 date_format: "%Y-%m-%d"
 max_per_feed: 30
+max_days_old: 1 
 
 feeds:
   # ---------- English ---------
@@ -68,12 +69,6 @@ feeds:
     url: "https://www.ft.com/middle-east-north-africa?format=rss"
     lang: "en"
     category: "Middle East"
-
-  - id: eco_business
-    name: "The Economist"
-    url: "https://www.economist.com/business/rss.xml"
-    lang: "en"
-    category: "Business"
 
   - id: eco_business
     name: "The Economist"

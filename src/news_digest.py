@@ -1,5 +1,5 @@
 from collections import defaultdict
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import feedparser
@@ -18,11 +18,20 @@ def load_config(path=CONFIG_PATH):
 
 # -------- core logic --------
 
-def fetch_headlines(feeds, max_per_feed):
+def fetch_headlines(feeds, max_per_feed, max_days_old=1):
     items = []
+    cutoff = date.today() - timedelta(days=max_days_old)
     for f in feeds:
         d = feedparser.parse(f["url"])
         for e in d.entries[:max_per_feed]:
+            parsed = getattr(e, "published_parsed", None) or getattr(
+                e, "updated_parsed", None
+            )
+            if parsed:
+                pub_d = date(parsed.tm_year, parsed.tm_mon, parsed.tm_mday)
+                if pub_d < cutoff:
+                    continue
+
             title = getattr(e, "title", "").strip()
             link = getattr(e, "link", "").strip()
             if not title:
@@ -88,9 +97,10 @@ def run_for_lang(cfg, lang):
         return None
 
     max_per_feed = cfg.get("max_per_feed", 30)
+    max_days_old = cfg.get("max_days_old", 1)
     dfmt = cfg.get("date_format", "%Y-%m-%d")
 
-    items = fetch_headlines(feeds, max_per_feed)
+    items = fetch_headlines(feeds, max_per_feed, max_days_old=max_days_old)
     items = dedupe(items)
     grouped = group_by_category(items)
     return export_markdown(grouped, lang, dfmt)
